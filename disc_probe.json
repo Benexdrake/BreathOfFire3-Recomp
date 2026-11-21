@@ -1,0 +1,29 @@
+{
+  "cue_path": "C:\\Discs\\BOF3\\Breath of Fire III (Europe).cue",
+  "cue_name": "Breath of Fire III (Europe).cue",
+  "bin_name": "Breath of Fire III (Europe) (Track 1).bin",
+  "track_count": 2,
+  "data_track_size": 442806336,
+  "data_track_md5": "bfaff833c0120e58581848902de7ce2c",
+  "data_track_sha1": "43c44794e1efc180cae069b3348e9cbc92e5fc0a",
+  "data_track_crc32": "08a881dc",
+  "boot_exe": "SLES_013.04",
+  "serial": "SLES-01304",
+  "serial_exe": "SLES_013.04",
+  "volume_id": "BREATH_OF_FIRE3",
+  "display_name": "BreathOfFire3",
+  "load_address": "0x80096800",
+  "entry_pc": "0x8014AA0C",
+  "text_size": "0x00160800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "c387d05c1c403c0ba7c7120cd5b8c7390b7314b51ad4cdca40097120a77421ce",
+  "boot_exe_sha256": "40c00a7324488dca665a81f85d0c14de25e3579aba7e7d20c1f821c5a3046cba",
+  "seed_count": 532,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
