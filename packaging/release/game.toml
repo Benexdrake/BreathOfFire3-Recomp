@@ -1,0 +1,68 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "BreathOfFire3"
+id = "SLES-01304"
+players = 1
+exe = "disc/SLES_013.04"
+load_address = "0x80096800"
+entry_pc = "0x8014AA0C"
+text_size = "0x00160800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Breath of Fire III (Europe) (Track 1).bin"
+cue_name = "Breath of Fire III (Europe).cue"
+boot_exe = "SLES_013.04"
+known_sizes = [442806336]
+known_md5 = [
+  "bfaff833c0120e58581848902de7ce2c",
+]
+known_sha1 = [
+  "43c44794e1efc180cae069b3348e9cbc92e5fc0a",
+]
+known_crc32 = [
+  "08a881dc",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "BreathOfFire3 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "16:9"
+
+# Widescreen experiment: auto-detect GTE screen-extent culls (320x240).
+[widescreen]
+gte_game_mode = true
+[widescreen.cull]
+auto_screen_x = true
+# Main-EXE object/tile screen-X rejects: (SX + bias) < width, each paired with a Y test.
+screen_x_sites = [
+  "0x8014C73C",  # sltiu v0,v0,449   (SX+64)
+  "0x80153668",  # sltiu v0,v0,421   (SX+50)
+  "0x80156344",  # sltiu v0,v0,519   (SX+99)
+  "0x8015656C",  # sltiu v0,v0,439   (SX+59)
+  "0x80156810",  # sltiu v0,v0,481   (SX+80)
+  "0x80157CC4",  # sltiu v1,v1,441   (SX+60)
+]
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "c387d05c1c403c0ba7c7120cd5b8c7390b7314b51ad4cdca40097120a77421ce"

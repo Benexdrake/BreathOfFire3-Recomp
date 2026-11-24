@@ -1,9 +1,9 @@
 # BreathOfFire3
 
 <!-- retcomm-readme-metrics -->
-[![GitHub downloads (all assets, all releases)](https://img.shields.io/github/downloads/RetroPortingToolKit/bof3-recomp/total)](https://github.com/RetroPortingToolKit/bof3-recomp/releases)
-[![GitHub downloads (latest release)](https://img.shields.io/github/downloads/RetroPortingToolKit/bof3-recomp/latest/total)](https://github.com/RetroPortingToolKit/bof3-recomp/releases/latest)
-[![GitHub release](https://img.shields.io/github/v/release/RetroPortingToolKit/bof3-recomp)](https://github.com/RetroPortingToolKit/bof3-recomp/releases/latest)
+[![GitHub downloads (all assets, all releases)](https://img.shields.io/github/downloads/Benexdrake/BreathOfFire3-Recomp/total)](https://github.com/Benexdrake/BreathOfFire3-Recomp/releases)
+[![GitHub downloads (latest release)](https://img.shields.io/github/downloads/Benexdrake/BreathOfFire3-Recomp/latest/total)](https://github.com/Benexdrake/BreathOfFire3-Recomp/releases/latest)
+[![GitHub release](https://img.shields.io/github/v/release/Benexdrake/BreathOfFire3-Recomp)](https://github.com/Benexdrake/BreathOfFire3-Recomp/releases/latest)
 <!-- /retcomm-readme-metrics -->
 
 Static recompilation of **BreathOfFire3** built on
@@ -19,6 +19,12 @@ JRPG by Capcom (PlayStation, 1997/1998), recompiled to run natively with modern 
 | Publisher | - |
 | Year | - |
 
+## Download
+
+Get the latest build from the [Releases page](https://github.com/Benexdrake/BreathOfFire3-Recomp/releases/latest) (Windows x64: unzip, start `BreathOfFire3.exe`).
+
+No game data is included. You need your own copy of the European disc (SLES-01304) as bin/cue; see [DISC.md](DISC.md).
+
 ## What is built in
 
 **Status: played only briefly** (start of the game, field and battle checked).
@@ -31,7 +37,6 @@ Not yet tested: world map, towns, menus, FMV.
 ### Common to all recomps in this family
 
 - **60 fps:** PAL titles are forced to NTSC 60 Hz timing (`PSX_FORCE_60HZ=0` restores 50 Hz); the game runs ~20 % faster than on a PAL console.
-- **Faster loading:** CD speed-up and turbo while the memory card is being read.
 - **16:9** is provided by a trusted mod plugin (fixed display aspect 16:9) together with widescreen culling hooks; each feature can be switched off in `mods/state.toml`.
 
 Scaffolded with the New Project Layout. See
